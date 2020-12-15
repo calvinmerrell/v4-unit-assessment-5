@@ -45,6 +45,15 @@
   margin: 0 5px;
 }
 
+@media (max-width: 450px){
+  .auth-container{
+    display: none;
+  }
+  .auth-button-container{
+    justify-content: space-around;
+  }
+}
+
 @keyframes rotating {
   from{
     transform: rotate(0deg);
