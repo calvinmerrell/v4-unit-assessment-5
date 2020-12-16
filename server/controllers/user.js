@@ -28,12 +28,12 @@ module.exports = {
         const [existingUser] = await db.get_user_by_username([username])
 
         if(!existingUser){
-            reutrn res.status(404).send('User not found')
+            return res.status(404).send('User not found')
         }
         const isAuthenticated = bcrypt.compareSync(password,existingUser.hash)
     
         if(!isAuthenticated){
-            retun res.status(403).send('Incorrect password')
+            return res.status(403).send('Incorrect password')
         }
         delete existingUser.hash
 
